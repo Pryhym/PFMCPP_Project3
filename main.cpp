@@ -36,51 +36,51 @@ Sub Object 1: Steering Wheel
     Name 4 things you'll find on the:    Steering Wheel
         1) paddle shifters
         2) 'cruise control' controls
-        3) 
-        4) 
+        3) sound system controls
+        4) turn signal shifter
     Name 2 things you can do with the:   Steering Wheel
         1) adjust cruise control settings.
-        2)
+        2) adjust the sound system
         
 Sub Object 2: Instrument Cluster
     Name 4 things you'll find on the:   Instrument Cluster
-        1)
-        2)
-        3)
-        4)
+        1) the speedometer
+        2) the odometer
+        3) the fuel gauge
+        4) the engine temperature indicator
     Name 3 things you can do with the:   Instrument Cluster
-        1)
-        2)
-        3)
+        1) read the current speed of the car
+        2) read the current miles driven by the car
+        3) read the amount of fuel currently in the car
     
 Sub Object 3: Environment Controls
     Name 3 things you'll find on the:    Environment Controls
-        1)
-        2)
-        3)
+        1) temperature control
+        2) zone control
+        3) fan speed adjuster
     Name 3 things you can do with the:   Environment Controls
-        1)
-        2)
-        3)
+        1) adjust temperature
+        2) change affected zones
+        3) adjust speed of fan
 
 Sub Object 4: Infotainment System
     Name 3 things you'll find on the:    Infotainment System
-        1)
-        2)
-        3)
+        1) radio control
+        2) cd player control
+        3) phone controls
     Name 3 things you can do with the:   Infotainment System
-        1)
-        2)
-        3)
+        1) control the radio
+        2) control the cd player
+        3) answer and end phone calls
 
 Sub Object 5: Seat 
     Name 3 things you'll find on the:    Seat
-        1)
-        2)
-        3)
+        1) seat position adjuster
+        2) back position adjuster
+        3) head rest
     Name 2 things you can do with the:   Seat
-        1)
-        2)
+        1) adjust seat distance
+        2) adjust back position
 */
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
