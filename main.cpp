@@ -81,6 +81,61 @@ Part1 will be broken up into 5 separate steps
 */
 
 /*
+Thing 1) Laundromat
+5 properties:
+    1) number of washers(int)
+    2) number of dryers(int)
+    3) amount of water used daily(float)
+    4) amount of energy used drying daily(float)
+    5) amount of money made daily(float)
+3 things it can do:
+    1) wash clothes
+    2) dry clothes
+    3) make change out of bills
+ */
+
+/*
+Thing 2) bank
+5 properties:
+    1) amount of money deposited into it(float)
+    2) amount of money withdrawn from it(float)
+    3) amount of interest paid(float)
+    4) amount of debt owed(float)
+    5) amount of principal paid(float)
+3 things it can do:
+    1) hold money
+    2) process transactions
+    3) produce a cash balance
+ */
+
+/*
+Thing 3) resturant  
+5 properties:
+    1) number tables available(int)
+    2) number of workers(int)
+    3) number of plates served(int)
+    4) amount of food per family(float)
+    5) number of hours worked per employee(float)
+3 things it can do:
+    1) serve food
+    2) collect payment
+    3) provide eating utensils
+ */
+
+/*
+Thing 4) car dealership
+5 properties:
+    1) number of cars in inventory(int)
+    2) amount of cars sold in a month(int)
+    3) amount sales people on staff(int)
+    4) number of cars serviced each week(int)
+    5) amount of inventory bought this month(int)
+3 things it can do:
+    1) sell cars
+    2) hire salesmen
+    3) buy inventory
+ */
+/*
 Thing 5) speakers
 5 properties:
     1) brand (std::string)
@@ -149,66 +204,6 @@ Thing 9) turntable
     2) plays at 33 or 45 rpms
     3) adjusts for anti-skip
  */
-
-
-
-
-/*
-Thing 1) Laundromat
-5 properties:
-    1) number of washers(int)
-    2) number of dryers(int)
-    3) amount of water used daily(float)
-    4) amount of energy used drying daily(float)
-    5) amount of money made daily(float)
-3 things it can do:
-    1) wash clothes
-    2) dry clothes
-    3) make change out of bills
- */
-
-/*
-Thing 2) bank
-5 properties:
-    1) amount of money deposited into it(float)
-    2) amount of money withdrawn from it(float)
-    3) amount of interest paid(float)
-    4) amount of debt owed(float)
-    5) amount of principal paid(float)
-3 things it can do:
-    1) hold money
-    2) process transactions
-    3) produce a cash balance
- */
-
-/*
-Thing 3) resturant  
-5 properties:
-    1) number tables available(int)
-    2) number of workers(int)
-    3) number of plates served(int)
-    4) amount of food per family(float)
-    5) number of hours worked per employee(float)
-3 things it can do:
-    1) serve food
-    2) collect payment
-    3) provide eating utensils
- */
-
-/*
-Thing 4) car dealership
-5 properties:
-    1) number of cars in inventory(int)
-    2) amount of cars sold in a month(int)
-    3) amount sales people on staff(int)
-    4) number of cars serviced each week(int)
-    5) amount of inventory bought this month(int)
-3 things it can do:
-    1) sell cars
-    2) hire salesmen
-    3) buy inventory
- */
-
 /*
 Thing 10) stereo system
 5 properties:
