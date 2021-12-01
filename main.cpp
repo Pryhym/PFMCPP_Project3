@@ -65,30 +65,13 @@ Part1 will be broken up into 5 separate steps
 */
 
 /*
-Thing 10)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
-
-
-
-
-/*
 Thing 1) Laundromat
 5 properties:
-    1) number of washers
-    2) number of dryers
-    3) amount of water used daily
-    4) amount of energy used drying daily
-    5) amount of money made daily
+    1) number of washers(int)
+    2) number of dryers(int)
+    3) amount of water used daily(float)
+    4) amount of energy used drying daily(float)
+    5) amount of money made daily(float)
 3 things it can do:
     1) wash clothes
     2) dry clothes
@@ -98,11 +81,11 @@ Thing 1) Laundromat
 /*
 Thing 2) bank
 5 properties:
-    1) amount of money deposited into it
-    2) amount of money withdrawn from it
-    3) amount of interest paid
-    4) amount of debt owed
-    5) amount of principal paid
+    1) amount of money deposited into it(float)
+    2) amount of money withdrawn from it(float)
+    3) amount of interest paid(float)
+    4) amount of debt owed(float)
+    5) amount of principal paid(float)
 3 things it can do:
     1) hold money
     2) process transactions
@@ -112,11 +95,11 @@ Thing 2) bank
 /*
 Thing 3) resturant  
 5 properties:
-    1) number tables available
-    2) number of workers
-    3) number of plates served
-    4) amount of food per family
-    5) number of hours worked per employee
+    1) number tables available(int)
+    2) number of workers(int)
+    3) number of plates served(int)
+    4) amount of food per family(float)
+    5) number of hours worked per employee(float)
 3 things it can do:
     1) serve food
     2) collect payment
@@ -126,17 +109,30 @@ Thing 3) resturant
 /*
 Thing 4) car dealership
 5 properties:
-    1) number of cars in inventory
-    2) amount of cars sold in a month
-    3) amount sales people on staff
-    4) number of cars serviced each week
-    5) amount of inventory bought this month
+    1) number of cars in inventory(int)
+    2) amount of cars sold in a month(int)
+    3) amount sales people on staff(int)
+    4) number of cars serviced each week(int)
+    5) amount of inventory bought this month(int)
 3 things it can do:
     1) sell cars
     2) hire salesmen
     3) buy inventory
  */
 
+/*
+Thing 10) stereo system
+5 properties:
+    1) speakers
+    2) amp
+    3) receiver
+    4) remote
+    5) tuntable
+3 things it can do:
+    1) play records
+    2) play radio
+    3) record audio
+ */
 
 
 /*
