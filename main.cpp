@@ -81,73 +81,73 @@ Part1 will be broken up into 5 separate steps
 */
 
 /*
-Thing 5)
+Thing 5) speakers
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) brand (std::string)
+    2) model number (int)
+    3) size (int)
+    4) frequency range (float)
+    5) impedence (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) produce audio
+    2) receive signal
+    3) vibrate
  */
 
 /*
-Thing 6)
+Thing 6) amp
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) brand (std::string)
+    2) model number (int)
+    3) power (float)
+    4) impedence (float)
+    5) outputs (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) project audio signal
+    2) power speakers
+    3) protect system from failure
  */
 
 /*
-Thing 7)
+Thing 7) receiver
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) brand (std::string)
+    2) model number (int)
+    3) functions (int)
+    4) inputs (int)
+    5) outputs (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) play cds
+    2) play records
+    3) play radio
  */
 
 /*
-Thing 8)
+Thing 8) remote
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) brand (std::string)
+    2) model number (int)
+    3) range (float)
+    4) function selector (int)
+    5) batteries needed (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) select inputs
+    2) adjust volume
+    3) select mode
  */
 
 /*
-Thing 9)
+Thing 9) turntable
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) brand (std::string)
+    2) model number (int)
+    3) belt speed (float)
+    4) outputs (int)
+    5) needle weight (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) plays records
+    2) plays at 33 or 45 rpms
+    3) adjusts for anti-skip
  */
 
 
