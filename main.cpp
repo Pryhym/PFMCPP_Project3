@@ -199,7 +199,17 @@ Thing 1) Laundromat
     2) dry clothes
     3) make change out of bills
  */
-
+struct Laundromat
+{
+    //1) number of washers(int)
+    //2) number of dryers(int)
+    //3) amount of water used daily(float)
+    //4) amount of energy used drying daily(float)
+    //5) amount of money made daily(float)
+    //1) wash clothes
+    //2) dry clothes
+    //3) make change out of bills
+};
 /*
 Thing 2) bank
 5 properties:
@@ -213,7 +223,17 @@ Thing 2) bank
     2) process transactions
     3) produce a cash balance
  */
-
+struct Bank
+{
+    //1) amount of money deposited into it(float)
+    //2) amount of money withdrawn from it(float)
+    //3) amount of interest paid(float)
+    //4) amount of debt owed(float)
+    //5) amount of principal paid(float)
+    //1) hold money
+    //2) process transactions
+    //3) produce a cash balance
+};
 /*
 Thing 3) resturant  
 5 properties:
@@ -227,7 +247,17 @@ Thing 3) resturant
     2) collect payment
     3) provide eating utensils
  */
-
+struct Resturant
+{
+    //1) number tables available(int)
+    //2) number of workers(int)
+    //3) number of plates served(int)
+    //4) amount of food per family(float)
+    //5) number of hours worked per employee(float)
+    //1) serve food
+    //2) collect payment
+    //3) provide eating utensils
+};
 /*
 Thing 4) car dealership
 5 properties:
@@ -241,6 +271,17 @@ Thing 4) car dealership
     2) hire salesmen
     3) buy inventory
  */
+ struct CarDealership
+{
+    //1) number of cars in inventory(int)
+    //2) amount of cars sold in a month(int)
+    //3) amount sales people on staff(int)
+    //4) number of cars serviced each week(int)
+    //5) amount of inventory bought this month(int)
+    //1) sell cars
+    //2) hire salesmen
+    //3) buy inventory
+};
 /*
 Thing 5) speakers
 5 properties:
@@ -254,7 +295,17 @@ Thing 5) speakers
     2) receive signal
     3) vibrate
  */
-
+struct Speakers
+{
+    //1) brand (std::string)
+    //2) model number (int)
+    //3) size (int)
+    //4) frequency range (float)
+    //5) impedence (float)
+    //1) produce audio
+    //2) receive signal
+    //3) vibrate
+};
 /*
 Thing 6) amp
 5 properties:
@@ -268,7 +319,17 @@ Thing 6) amp
     2) power speakers
     3) protect system from failure
  */
-
+struct Amp
+{
+    //1) brand (std::string)
+    //2) model number (int)
+    //3) power (float)
+    //4) impedence (float)
+    //5) outputs (int)
+    //1) project audio signal
+    //2) power speakers
+    //3) protect system from failure
+};
 /*
 Thing 7) receiver
 5 properties:
@@ -282,7 +343,17 @@ Thing 7) receiver
     2) play records
     3) play radio
  */
-
+struct Receiver
+{
+    //1) brand (std::string)
+    //2) model number (int)
+    //3) functions (int)
+    //4) inputs (int)
+    //5) outputs (int)
+    //1) play cds
+    //2) play records
+    //3) play radio
+};
 /*
 Thing 8) remote
 5 properties:
@@ -296,7 +367,17 @@ Thing 8) remote
     2) adjust volume
     3) select mode
  */
-
+struct Remote
+{
+    //1) brand (std::string)
+    //2) model number (int)
+    //3) range (float)
+    //4) function selector (int)
+    //5) batteries needed (int)
+    //1) select inputs
+    //2) adjust volume
+    //3) select mode
+};
 /*
 Thing 9) turntable
 5 properties:
@@ -310,6 +391,17 @@ Thing 9) turntable
     2) plays at 33 or 45 rpms
     3) adjusts for anti-skip
  */
+ struct Turntable
+{
+    //1) brand (std::string)
+    //2) model number (int)
+    //3) belt speed (float)
+    //4) outputs (int)
+    //5) needle weight (float)
+    //1) plays records
+    //2) plays at 33 or 45 rpms
+    //3) adjusts for anti-skip
+};
 /*
 Thing 10) stereo system
 5 properties:
@@ -323,7 +415,17 @@ Thing 10) stereo system
     2) play radio
     3) record audio
  */
-
+struct StereoSystem
+{
+    //1) speakers
+    //2) amp
+    //3) receiver
+    //4) remote
+    //5) tuntable
+    //1) play records
+    //2) play radio
+    //3) record audio
+};
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
