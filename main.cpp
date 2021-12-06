@@ -107,10 +107,26 @@ struct CarWash
     you should be able to deduce the return type of those functions based on their usage in Person::run()
     You'll need to insert the Person struct from the video in the space below.
  */
+    /*
+    void Person::run(int howFast, bool startWithLeftFoot)
+    {
+        if(startWithLeftFoot == true)
+        {
+            leftFoot.stepForward();
+            rightFoot.stepForward();
+        }
+        else
+        {
+            rightFoot.stepForward();
+            leftFoot.stepForward();
+        }
+        distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+    }
+    */
    struct Limb
    {
        void stepForward();
-       float stepSize();
+       float stepSize(float size);
    };
    struct Person
    {
@@ -122,7 +138,15 @@ struct CarWash
        Limb leftFoot;
        Limb rightFoot;
    };
+    void Limb::stepForward()
+    {
 
+    }
+
+    float Limb::stepSize(float size)
+    {
+        return size;
+    }
  /*
  2) provide implementations for the member functions you declared in your 10 user-defined types from the previous video outside of your UDT definitions.
     If you have warnings about 'unused parameter', you aren't using one of your function parameters in your implementation.
@@ -148,7 +172,7 @@ struct Laundromat
     float amOfEnergyUsedDaily = 5000.02f;
     float amOfMoneyMadeDaily = 800.45f;
 
-    struct WashingMach
+    struct WashingMachine
     {
         std::string brand = "Maytag";
         int modelNum = 730;
@@ -156,8 +180,8 @@ struct Laundromat
         float powUsed = 75.43f;
         int washes = 17;
         void wash();
-        float countChang(int coins);
-        float dwnTime(float timeOff);
+        float countChange(int coins);
+        float downTime(float timeOff);
     };
 
     void washClothes();
@@ -180,17 +204,17 @@ float Laundromat::makeChange(float price, float amPaid)
     return amPaid - price;
 }
 
-void Laundromat::WashingMach::wash()
+void Laundromat::WashingMachine::wash()
 {
 
 }
 
-float Laundromat::WashingMach::countChang(int coins)
+float Laundromat::WashingMachine::countChange(int coins)
 {
     return coins;
 }
 
-float Laundromat::WashingMach::dwnTime(float timeOff)
+float Laundromat::WashingMachine::downTime(float timeOff)
 {
     return timeOff;
 }
@@ -203,8 +227,8 @@ struct Bank
     float debtOwed = 2000.05f;
     float Paid = 1500.25f;
     float holdMoney(float amount);
-    void transaction();
-    float cashBalance(float balance);
+    void processTransactions();
+    float produceCashBalance(float balance);
 };
 
 float Bank::holdMoney(float amount)
@@ -212,17 +236,17 @@ float Bank::holdMoney(float amount)
     return amount;
 }
 
-void Bank::transaction()
+void Bank::processTransactions()
 {
 
 }
 
-float Bank::cashBalance(float balance)
+float Bank::produceCashBalance(float balance)
 {
     return balance;
 }
 
-struct Resturant
+struct Restaurant
 {
     int tblsAvail = 23;
     int workers = 15;
@@ -237,42 +261,42 @@ struct Resturant
         int amOfPeopleServed = 8;
         float hoursWorked = 17.5f;
         float currPay = 9.45f;
-        void serveCust();
+        void serveCustomer();
         void cleanTable();
         float countTip(float tip);
     };
 
     void serveFood();
     float collectPayment(float payment);
-    void utensils();
+    void provideEatingUtensils();
 };
 
-void Resturant::serveFood()
+void Restaurant::serveFood()
 {
 
 }
 
-float Resturant::collectPayment(float payment)
+float Restaurant::collectPayment(float payment)
 {
     return payment;
 }
 
-void Resturant::utensils()
+void Restaurant::provideEatingUtensils()
 {
 
 }
 
-void Resturant::Server::serveCust()
+void Restaurant::Server::serveCustomer()
 {
 
 }
 
-void Resturant::Server::cleanTable()
+void Restaurant::Server::cleanTable()
 {
 
 }
 
-float Resturant::Server::countTip(float tip)
+float Restaurant::Server::countTip(float tip)
 {
     return tip;
 }
@@ -283,23 +307,23 @@ struct CarDealership
     int carSold = 50;
     int staff = 23;
     int carServiced = 40;
-    int invBought = 15;
-    float carSale(float price);
-    void salesmen();
-    int invator(int invatory);
+    int invatoryBought = 15;
+    float sellCars(float price);
+    void hireSalesmen();
+    int buyInvatory(int invatory);
 };
 
-float CarDealership::carSale(float price)
+float CarDealership::sellCars(float price)
 {
     return price;
 }
 
-void CarDealership::salesmen()
+void CarDealership::hireSalesmen()
 {
 
 }
 
-int CarDealership::invator(int invatory)
+int CarDealership::buyInvatory(int invatory)
 {
     return invatory;
 }
@@ -312,12 +336,12 @@ struct Speakers
     int size = 12;
     float freqRange = 145.4f;
     float impedence = 50.0f;
-    void audio();
+    void produceAudio();
     void receiveSignal();
-    void vibrate();
+    void vibrateCone();
 };
 
-void Speakers::audio()
+void Speakers::produceAudio()
 {
 
 }
@@ -327,7 +351,7 @@ void Speakers::receiveSignal()
     
 }
 
-void Speakers::vibrate()
+void Speakers::vibrateCone()
 {
     
 }
@@ -339,22 +363,22 @@ struct Amp
     float power = 200.f;
     float impedence = 200.f;
     int outputs = 4;
-    void amplify();
-    void speakers();
-    void surgeProtect();
+    void projectAudio();
+    void powerSpeakers();
+    void protectSystemFailure();
 };
 
-void Amp::amplify()
+void Amp::projectAudio()
 {
     
 }
 
-void Amp::speakers()
+void Amp::powerSpeakers()
 {
     
 }
 
-void Amp::surgeProtect()
+void Amp::protectSystemFailure()
 {
     
 }
@@ -393,22 +417,22 @@ struct Remote
     float range = 135.4f;
     int selector = 5;
     int batteries = 2;
-    void inputs();
-    int adjustVol(int volUp, int volDwn, int currVol);
-    void mode();
+    void selectInputs();
+    int adjustVolume(int volUp, int volDwn, int currVol);
+    void selectMode();
 };
 
-void Remote::inputs()
+void Remote::selectInputs()
 {
     
 }
 
-int Remote::adjustVol(int volUp, int volDwn, int currVol)
+int Remote::adjustVolume(int volUp, int volDwn, int currVol)
 {
     return currVol += volUp - volDwn;
 }
 
-void Remote::mode()
+void Remote::selectMode()
 {
     
 }
@@ -421,8 +445,8 @@ struct Turntable
     int outputs = 4;
     float needleWeight = 0.0043f;
     void playRecord();
-    bool rpms(bool thirtThree);
-    void skipAdjust();
+    bool choosePlaybackSpeed(bool thirtThree);
+    void antiSkipAdjust();
 };
 
 void Turntable::playRecord()
@@ -430,12 +454,12 @@ void Turntable::playRecord()
     
 }
 
-bool Turntable::rpms(bool thirtThree)
+bool Turntable::choosePlaybackSpeed(bool thirtThree)
 {
     return thirtThree;
 }
 
-void Turntable::skipAdjust()
+void Turntable::antiSkipAdjust()
 {
     
 }
@@ -447,23 +471,23 @@ struct StereoSystem
     Receiver receiver;
     Remote remote;
     Turntable turntable;
-    Receiver playRecord();
-    Receiver playRadio();
-    Receiver recordAudio();
+    void playRecord();
+    void playRadio();
+    void recordAudio();
 };
-Receiver StereoSystem::playRecord()
+void StereoSystem::playRecord()
 {
-    return receiver;
+    
 }
 
-Receiver StereoSystem::playRadio()
+void StereoSystem::playRadio()
 {
-    return receiver;
+    
 }
 
-Receiver StereoSystem::recordAudio()
+void StereoSystem::recordAudio()
 {
-    return receiver;
+    
 }
 
 /*
