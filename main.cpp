@@ -108,29 +108,29 @@ struct CarWash
     You'll need to insert the Person struct from the video in the space below.
  */
 
-   struct Limb
-   {
-       void stepForward();
-       float stepSize(float size);
-   };
-   struct Person
-   {
-       int age;
-       int height;
-       float hairLength;
-       float GPA;
-       float distanceTraveled;
-       unsigned int SATScore;
-       Limb leftFoot;
-       Limb rightFoot;
-       void run(int howFast, bool startWithLeftFoot);
-   };
+    struct Limb
+    {
+        void stepForward();
+        float stepSize(int size);
+    };
+    struct Person
+    {
+        int age;
+        int height;
+        float hairLength;
+        float GPA;
+        float distanceTraveled;
+        unsigned int SATScore;
+        Limb leftFoot;
+        Limb rightFoot;
+        void run(int howFast, bool startWithLeftFoot);
+    };
     void Limb::stepForward()
     {
 
     }
 
-    float Limb::stepSize(float size)
+    float Limb::stepSize(int size)
     {
         return size;
     }
@@ -147,7 +147,7 @@ struct CarWash
             rightFoot.stepForward();
             leftFoot.stepForward();
         }
-        distanceTraveled += leftFoot.stepSize(float(howFast)) + rightFoot.stepSize(float(howFast));
+        distanceTraveled += leftFoot.stepSize(howFast) + rightFoot.stepSize(howFast);
     }
    
  /*
@@ -313,7 +313,7 @@ struct CarDealership
     int inventoryBought = 15;
     float sellCars(float price);
     void hireSalesmen();
-    int buyInventory(int invatory);
+    int buyInventory(int inventory);
 };
 
 float CarDealership::sellCars(float price)
@@ -432,6 +432,9 @@ void Remote::selectInputs()
 
 int Remote::adjustVolume(int volUp, int volDwn, int currVol)
 {
+    FIXME: what is this returning?  split expressions like this up into 2 lines: 
+    - the expression that modifies currVol
+    - the value you actually want to return. 
     return currVol += volUp - volDwn;
 }
 
