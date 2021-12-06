@@ -107,7 +107,34 @@ struct CarWash
     you should be able to deduce the return type of those functions based on their usage in Person::run()
     You'll need to insert the Person struct from the video in the space below.
  */
-    /*
+
+   struct Limb
+   {
+       void stepForward();
+       float stepSize(float size);
+   };
+   struct Person
+   {
+       int age;
+       int height;
+       float hairLength;
+       float GPA;
+       float distanceTraveled;
+       unsigned int SATScore;
+       Limb leftFoot;
+       Limb rightFoot;
+       void run(int howFast, bool startWithLeftFoot);
+   };
+    void Limb::stepForward()
+    {
+
+    }
+
+    float Limb::stepSize(float size)
+    {
+        return size;
+    }
+
     void Person::run(int howFast, bool startWithLeftFoot)
     {
         if(startWithLeftFoot == true)
@@ -120,33 +147,9 @@ struct CarWash
             rightFoot.stepForward();
             leftFoot.stepForward();
         }
-        distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+        distanceTraveled += leftFoot.stepSize(float(howFast)) + rightFoot.stepSize(float(howFast));
     }
-    */
-   struct Limb
-   {
-       void stepForward();
-       float stepSize(float size);
-   };
-   struct Person
-   {
-       int age;
-       int height;
-       float hairLength;
-       float GPA;
-       unsigned int SATScore;
-       Limb leftFoot;
-       Limb rightFoot;
-   };
-    void Limb::stepForward()
-    {
-
-    }
-
-    float Limb::stepSize(float size)
-    {
-        return size;
-    }
+   
  /*
  2) provide implementations for the member functions you declared in your 10 user-defined types from the previous video outside of your UDT definitions.
     If you have warnings about 'unused parameter', you aren't using one of your function parameters in your implementation.
@@ -307,10 +310,10 @@ struct CarDealership
     int carSold = 50;
     int staff = 23;
     int carServiced = 40;
-    int invatoryBought = 15;
+    int inventoryBought = 15;
     float sellCars(float price);
     void hireSalesmen();
-    int buyInvatory(int invatory);
+    int buyInventory(int invatory);
 };
 
 float CarDealership::sellCars(float price)
@@ -323,9 +326,9 @@ void CarDealership::hireSalesmen()
 
 }
 
-int CarDealership::buyInvatory(int invatory)
+int CarDealership::buyInventory(int inventory)
 {
-    return invatory;
+    return inventory;
 }
 
 struct Speakers
