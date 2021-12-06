@@ -430,12 +430,11 @@ void Remote::selectInputs()
     
 }
 
-int Remote::adjustVolume(int volUp, int volDwn, int currVol)
+int Remote::adjustVolume(int volumeUp, int volumeDown, int currentVolume)
 {
-    FIXME: what is this returning?  split expressions like this up into 2 lines: 
-    - the expression that modifies currVol
-    - the value you actually want to return. 
-    return currVol += volUp - volDwn;
+    currentVolume += volumeUp - volumeDown;
+    return currentVolume;
+
 }
 
 void Remote::selectMode()
