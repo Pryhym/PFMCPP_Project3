@@ -75,11 +75,11 @@ int main()
 struct Laundromat
 {
     
-    int numWashers = 20;
-    int numDryers = 20; 
-    float amOfWaterUsedDaily = 200.00f; 
-    float amOfEnergyUsedDaily = 5000.02f;
-    float amOfMoneyMadeDaily = 800.45f;
+    int numWashers;
+    int numDryers; 
+    float amOfWaterUsedDaily; 
+    float amOfEnergyUsedDaily;
+    float amOfMoneyMadeDaily;
     Laundromat();
     struct WashingMachine
     {
@@ -106,6 +106,7 @@ Laundromat::Laundromat()
     amOfEnergyUsedDaily = 0;
     amOfMoneyMadeDaily = 0;
     std::cout << "Laundromat Class" << std::endl;
+    std::cout << "constructing the Amount of Water Used is: " << amOfWaterUsedDaily << std::endl;
 
 }
 void Laundromat::washClothes()
@@ -140,11 +141,11 @@ float Laundromat::WashingMachine::downTime(float timeOff)
 
 struct Bank
 {
-    float moneyDeposited = 200.25f;
-    float moneyWithdrawn = 100.25f;
-    float interestPaid = 03.03f;
-    float debtOwed = 2000.05f;
-    float paid = 1500.25f;
+    float moneyDeposited;
+    float moneyWithdrawn;
+    float interestPaid;
+    float debtOwed;
+    float paid;
     Bank ();
     float holdMoney(float amount);
     void processTransactions();
@@ -159,6 +160,7 @@ Bank::Bank()
     debtOwed = 0;
     paid = 0;
     std::cout << "Bank Class" << std::endl;
+    std::cout << "The Amount Of Money You Have Deposited Is: " << moneyDeposited <<std::endl;
 }
 
 float Bank::holdMoney(float amount)
@@ -178,11 +180,11 @@ float Bank::produceCashBalance(float balance)
 
 struct Restaurant
 {
-    int tblsAvail = 23;
-    int workers = 15;
-    int platesServed = 42;
-    float amFoodPerFamily = 10.12f;
-    float hoursWorked = 39.97f;
+    int tblsAvail;
+    int workers;
+    int platesServed;
+    float amFoodPerFamily;
+    float hoursWorked;
     Restaurant();
 
     struct Server
@@ -210,6 +212,7 @@ Restaurant::Restaurant()
     amFoodPerFamily = 0;
     hoursWorked = 0;
     std::cout << "Restaurant Class" << std::endl;
+    std::cout << "Tables Available: " << tblsAvail << std::endl;
 }
 
 void Restaurant::serveFood()
@@ -244,11 +247,11 @@ float Restaurant::Server::countTip(float tip)
 
 struct CarDealership
 {
-    int carInventory = 200;
-    int carSold = 50;
-    int staff = 23;
-    int carServiced = 40;
-    int inventoryBought = 15;
+    int carInventory;
+    int carSold;
+    int staff;
+    int carServiced;
+    int inventoryBought;
     CarDealership();
     float sellCars(float price);
     void hireSalesmen();
@@ -263,6 +266,7 @@ CarDealership::CarDealership()
     carServiced = 0;
     inventoryBought = 0;
     std::cout << "CarDealership Class" << std::endl;
+    std::cout << "The Car Inventory is: " << carInventory << std::endl;
 }
 
 float CarDealership::sellCars(float price)
@@ -283,11 +287,11 @@ int CarDealership::buyInventory(int inventory)
 struct Speakers
 {
  
-    std::string brand = "Vagnavox";
-    int modelNum = 2340;
-    int size = 12;
-    float freqRange = 145.4f;
-    float impedence = 50.0f;
+    std::string brand;
+    int modelNum;
+    int size;
+    float freqRange;
+    float impedence;
     Speakers();
     void produceAudio();
     void receiveSignal();
@@ -296,12 +300,13 @@ struct Speakers
 
 Speakers::Speakers()
 {
-    brand = "";
+    brand = "Vagnavox";
     modelNum = 0;
     size = 0;
     freqRange = 0;
     impedence = 0;
     std::cout << "Speakers Class" << std::endl;
+    std::cout << "The Speaker Brand Is: " << brand << std::endl;
 }
 
 void Speakers::produceAudio()
@@ -321,11 +326,11 @@ void Speakers::vibrateCone()
 
 struct Amp
 {
-    std::string brand = "Fender";
-    int modelNum = 1200;
-    float power = 200.f;
-    float impedence = 200.f;
-    int outputs = 4;
+    std::string brand;
+    int modelNum;
+    float power;
+    float impedence;
+    int outputs;
     Amp();
     void projectAudio();
     void powerSpeakers();
@@ -334,11 +339,12 @@ struct Amp
 
 Amp::Amp()
 {
-    brand = "";
+    brand = "Fender";
     modelNum = 0;
     power = 0;
     impedence = 0;
     std::cout << "Amp Class" << std::endl;
+    std::cout << "The Amp Brand Is: " << brand << std::endl;
 }
 
 void Amp::projectAudio()
@@ -358,11 +364,11 @@ void Amp::protectSystemFailure()
 
 struct Receiver
 {
-    std::string brand = "Pioneer";
-    int modelNum = 2600;
-    int function = 6;
-    int inputs = 5;
-    int outputs = 4;
+    std::string brand;
+    int modelNum;
+    int function;
+    int inputs ;
+    int outputs;
     Receiver();
     void playCds();
     void playRecords();
@@ -371,12 +377,13 @@ struct Receiver
 
 Receiver::Receiver()
 {
-    brand = "";
+    brand = "Pioneer";
     modelNum = 0;
     function = 0;
     inputs = 0;
     outputs = 0;
     std::cout << "Receiver Class" <<std::endl;
+    std::cout << "The Receiver Brand Is: " << brand << std::endl;
 }
 
 void Receiver::playCds()
@@ -396,11 +403,11 @@ void Receiver::playRadio()
 
 struct Remote
 {
-    std::string brand = "Pioneer";
-    int modelNum = 1600;
-    float range = 135.4f;
-    int selector = 5;
-    int batteries = 2;
+    std::string brand;
+    int modelNum;
+    float range;
+    int selector;
+    int batteries;
     Remote();
     void selectInputs();
     int adjustVolume(int volUp, int volDwn, int currVol);
@@ -409,12 +416,13 @@ struct Remote
 
 Remote::Remote()
 {
-    brand = "";
+    brand = "Pioneer";
     modelNum = 0;
     range = 0;
     selector = 0;
     batteries = 0;
     std::cout << "Remote Class" << std::endl;
+    std::cout << "The REmote Brand Is: " << brand << std::endl;
 }
 
 void Remote::selectInputs()
@@ -436,11 +444,11 @@ void Remote::selectMode()
 
 struct Turntable
 {
-    std::string brand = "Mercury";
-    int modelNum = 1400;
-    float beltSpeed = 25.4f;
-    int outputs = 4;
-    float needleWeight = 0.0043f;
+    std::string brand;
+    int modelNum;
+    float beltSpeed;
+    int outputs;
+    float needleWeight;
     Turntable();
     void playRecord();
     bool choosePlaybackSpeed(bool thirtThree);
@@ -449,12 +457,13 @@ struct Turntable
 
 Turntable::Turntable()
 {
-    brand = "";
+    brand = "Mercury";
     modelNum = 0;
     beltSpeed = 0;
     outputs = 0;
     needleWeight = 0;
     std::cout << "Turntable Class" << std::endl;
+    std::cout << "The Turntable Brand Is: " << brand << std::endl;
 }
 
 void Turntable::playRecord()
