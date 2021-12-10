@@ -53,11 +53,15 @@ struct Laundromat
     struct WashingMachine
     {
         std::string brand = "Maytag";
-        int modelNum = 730;
-        float waterUsed = 24.57f;
+        int modelNum;
+        float waterUsed;
         float powUsed = 75.43f;
         int washes = 17;
-        void wash();
+        WashingMachine () :
+         modelNum(730), 
+         waterUsed(24.57f)
+         {}
+        void wash(); 
         float countChange(int coins);
         float downTime(float timeOff);
     };
@@ -108,19 +112,16 @@ struct Bank
     float moneyDeposited {2343.65f};
     float moneyWithdrawn {543.69f};
     float interestPaid = 349.67f;
-    float debtOwed = 5430.69f;
-    float paid = 1694.24f;
-    Bank ();
+    float paid;
+    float debtOwed;
+    Bank ():
+    paid(1694.24f),
+    debtOwed(5430.69f)
+    {}
     float holdMoney(float amount);
     void processTransactions();
     float produceCashBalance(float balance);
 };
-
-Bank::Bank()
-{
-    std::cout << "Bank Class" << std::endl;
-    std::cout << "The Amount Of Money You Have Deposited Is: " << moneyDeposited <<std::endl;
-}
 
 float Bank::holdMoney(float amount)
 {
@@ -150,8 +151,12 @@ struct Restaurant
     {
         std::string name = "James";
         long phoneNum = 8434305954;
-        int amOfPeopleServed = 8;
-        float hoursWorked = 17.5f;
+        int amOfPeopleServed;
+        float hoursWorked;
+        Server():
+        amOfPeopleServed(8),
+        hoursWorked(17.5f)
+        {}
         float currPay = 9.45f;
         void serveCustomer();
         void cleanTable();
@@ -203,20 +208,18 @@ struct CarDealership
 {
     int carInventory {40};
     int carSold {86};
-    int staff = 15;
-    int carServiced = 24;
+    int staff;
+    int carServiced;
     int inventoryBought = 64;
-    CarDealership();
+    CarDealership() :
+    staff(15), 
+    carServiced(24)
+    {}
     float sellCars(float price);
     void hireSalesmen();
     int buyInventory(int inventory);
 };
 
-CarDealership::CarDealership()
-{
-    std::cout << "CarDealership Class" << std::endl;
-    std::cout << "The Car Inventory is: " << carInventory << std::endl;
-}
 
 float CarDealership::sellCars(float price)
 {
@@ -376,20 +379,18 @@ struct Turntable
 {
     std::string brand {"Mercury"};
     int modelNum {7393734};
-    float beltSpeed = 67.67f;
-    int outputs = 2;
+    float outputs;
+    float beltSpeed;
     float needleWeight = 0.49673f;
-    Turntable();
+    Turntable():
+    outputs(2), 
+    beltSpeed(67.67f)
+    {}
     void playRecord();
     bool choosePlaybackSpeed(bool thirtThree);
     void antiSkipAdjust();
 };
 
-Turntable::Turntable()
-{
-    std::cout << "Turntable Class" << std::endl;
-    std::cout << "The Turntable Brand Is: " << brand << std::endl;
-}
 
 void Turntable::playRecord()
 {
