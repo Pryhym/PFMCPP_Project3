@@ -45,8 +45,8 @@ struct Laundromat
 {
     
     int numWashers = 5;
-    int numDryers = 20; 
-    float amOfWaterUsedDaily = 20.5f; 
+    int numDryers {20}; 
+    float amOfWaterUsedDaily {20.5f}; 
     float amOfEnergyUsedDaily = 70.21f;
     float amOfMoneyMadeDaily = 500.75f;
     Laundromat();
@@ -75,7 +75,7 @@ Laundromat::Laundromat()
 }
 void Laundromat::washClothes()
 {
-    std::cout << "Washing Clothes" << std::endl;
+    std::cout << "Number Of Dryers: " << numDryers << std::endl;
 }
 
 void Laundromat::dryClothes()
@@ -105,8 +105,8 @@ float Laundromat::WashingMachine::downTime(float timeOff)
 
 struct Bank
 {
-    float moneyDeposited = 2343.65f;
-    float moneyWithdrawn = 543.69f;
+    float moneyDeposited {2343.65f};
+    float moneyWithdrawn {543.69f};
     float interestPaid = 349.67f;
     float debtOwed = 5430.69f;
     float paid = 1694.24f;
@@ -129,7 +129,7 @@ float Bank::holdMoney(float amount)
 
 void Bank::processTransactions()
 {
-    std::cout << "Processing Transaction" << std::endl;
+    std::cout << "Money Withdrawn from ACCT: " << moneyWithdrawn << std::endl;
 }
 
 float Bank::produceCashBalance(float balance)
@@ -139,9 +139,9 @@ float Bank::produceCashBalance(float balance)
 
 struct Restaurant
 {
-    int tblsAvail = 9;
+    int tblsAvail {9};
     int workers = 8;
-    int platesServed = 24;
+    int platesServed {24};
     float amFoodPerFamily = 79.48f;
     float hoursWorked = 86.77f;
     Restaurant();
@@ -171,7 +171,7 @@ Restaurant::Restaurant()
 
 void Restaurant::serveFood()
 {
-    std::cout << "Serving Food" << std::endl;
+    std::cout << "Plates Served: " << platesServed << std::endl;
 }
 
 float Restaurant::collectPayment(float payment)
@@ -201,8 +201,8 @@ float Restaurant::Server::countTip(float tip)
 
 struct CarDealership
 {
-    int carInventory = 40;
-    int carSold = 86;
+    int carInventory {40};
+    int carSold {86};
     int staff = 15;
     int carServiced = 24;
     int inventoryBought = 64;
@@ -225,7 +225,7 @@ float CarDealership::sellCars(float price)
 
 void CarDealership::hireSalesmen()
 {
-    std::cout << "Hiring Salesmen" << std::endl;
+    std::cout << "Cars Sold: " << carSold << std::endl;
 }
 
 int CarDealership::buyInventory(int inventory)
@@ -236,8 +236,8 @@ int CarDealership::buyInventory(int inventory)
 struct Speakers
 {
  
-    std::string brand = "Vagnavox";
-    int modelNum = 214345;
+    std::string brand {"Vagnavox"};
+    int modelNum {214375};
     int size = 12;
     float freqRange = 15000.00f;
     float impedence = 59.45f;
@@ -260,7 +260,7 @@ void Speakers::produceAudio()
 
 void Speakers::receiveSignal()
 {
-    std::cout << "Receiving Signals into Speakers" << std::endl;
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
 
 void Speakers::vibrateCone()
@@ -271,7 +271,7 @@ void Speakers::vibrateCone()
 struct Amp
 {
     std::string brand = "Fender";
-    int modelNum = 18493;
+    int modelNum {18493};
     float power = 700;
     float impedence = 1200;
     int outputs = 4;
@@ -294,7 +294,7 @@ void Amp::projectAudio()
 
 void Amp::powerSpeakers()
 {
-    std::cout << "Powering Speakers" << std::endl;
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
 
 void Amp::protectSystemFailure()
@@ -304,8 +304,8 @@ void Amp::protectSystemFailure()
 
 struct Receiver
 {
-    std::string brand = "Pioneer";
-    int modelNum = 869585;
+    std::string brand {"Pioneer"};
+    int modelNum {869585};
     int function = 5;
     int inputs = 8;
     int outputs = 4;
@@ -328,7 +328,7 @@ void Receiver::playCds()
 
 void Receiver::playRecords()
 {
-    std::cout << "Playing Records from Receiver" << std::endl;
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
 
 void Receiver::playRadio()
@@ -338,8 +338,8 @@ void Receiver::playRadio()
 
 struct Remote
 {
-    std::string brand = "Pioneer";
-    int modelNum = 986454;
+    std::string brand {"Pioneer"};
+    int modelNum {986454};
     float range = 95.60f;
     int selector = 8;
     int batteries = 2;
@@ -357,7 +357,7 @@ Remote::Remote()
 
 void Remote::selectInputs()
 {
-    std::cout << "Remote in Use" << std::endl;
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
 
 int Remote::adjustVolume(int volumeUp, int volumeDown, int currentVolume)
@@ -374,8 +374,8 @@ void Remote::selectMode()
 
 struct Turntable
 {
-    std::string brand = "Mercury";
-    int modelNum = 7393734;
+    std::string brand {"Mercury"};
+    int modelNum {7393734};
     float beltSpeed = 67.67f;
     int outputs = 2;
     float needleWeight = 0.49673f;
@@ -393,7 +393,7 @@ Turntable::Turntable()
 
 void Turntable::playRecord()
 {
-    std::cout << "Playing Record from Turntable" << std::endl;
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
 
 bool Turntable::choosePlaybackSpeed(bool thirtThree)
