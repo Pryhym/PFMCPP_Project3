@@ -180,7 +180,7 @@ void Bank::processTransactions()
     std::cout << "Money Withdrawn from ACCT: " << moneyWithdrawn << std::endl;
 }
 
-float Bank::produceCashBalance(float balance = 0)
+float Bank::produceCashBalance(float balance)
 {
     for (balance = moneyDeposited; balance > 0; balance -= moneyWithdrawn)
     {
@@ -188,7 +188,7 @@ float Bank::produceCashBalance(float balance = 0)
         std::cout << "$543.69 WithDrawn " << std::endl;
         if (moneyWithdrawn > balance)
         {
-        std::cout << "Not Enough Funds!!!!!" <<std::endl;
+            std::cout << "Not Enough Funds!!!!!" <<std::endl;
         }
     }
     
@@ -256,9 +256,9 @@ void Restaurant::tableAmount(int platePerFamily, int families)
     {
        amountPerTable += (platePerFamily * amFoodPerFamily);
        std::cout << "The Amount Of food served Total Is: " << amountPerTable << std::endl;
-       families += 1;
+       ++families;
     }
-     std::cout << std::endl;
+    std::cout << std::endl;
 }
 
 void Restaurant::Server::serveCustomer()
@@ -315,7 +315,7 @@ void CarDealership::inventoryTracker()
     {
         std::cout << "Current Car Inventory Is: " << i <<std::endl;
     }
-     std::cout << std::endl;
+    std::cout << std::endl;
 }
 
 struct Speakers
@@ -341,13 +341,12 @@ Speakers::Speakers()
 
 void Speakers::produceAudio()
 {
-    
     while (time < 15)
     {
         std::cout << "Producing Audio!!!!!!!" << std::endl;
         ++time;
     }
-     std::cout << std::endl;
+    std::cout << std::endl;
 }
 
 void Speakers::receiveSignal()
@@ -381,7 +380,7 @@ Amp::Amp()
 
 void Amp::projectAudio()
 {
-  for(int i=1; i < outputs; ++i)
+  for(int i = 1; i < outputs; ++i)
   {
       std::cout << "Amp Is Powering Output: " << i <<std::endl;
   } 
@@ -426,11 +425,11 @@ void Receiver::selection()
     {
         playCds();
     }
-    while (function ==2)
+    while (function == 2)
     {
         playRecords();
     }
-    while (function ==3)
+    while (function == 3)
     {
         playRadio();
     }
@@ -492,15 +491,18 @@ Remote::Remote()
 
 void Remote::selectInputs()
 {
-   for (int i=0; i < 4; ++i)
+   for (int i = 0; i < 4; ++i)
    { 
-   if (i == 1){
+   if (i == 1)
+   {
        std::cout << "Input: Cd Player" << std::endl;
    }
-   if (i == 2){
+   if (i == 2)
+   {
        std::cout << "Input: Record Player" << std::endl;
    }
-    if (i == 3){
+    if (i == 3)
+    {
        std::cout << "Input: Radio" << std::endl;
    }
    }
@@ -554,13 +556,13 @@ void Turntable::antiSkipAdjust()
 }
 void Turntable::setBeltSpeed()
 {
-    int i=0;
-while (i < 2)
-{
-    beltSpeed = 33;
-    std::cout << "Belt Speed: " << beltSpeed << std::endl;
-    ++i;
-}
+    int i = 0;
+    while (i < 2)
+    {
+        beltSpeed = 33;
+        std::cout << "Belt Speed: " << beltSpeed << std::endl;
+        ++i;
+    }
 beltSpeed = 45;
 std::cout << "Belt Speed: " << beltSpeed << std::endl;
 }
@@ -629,7 +631,7 @@ int main()
     wash.waterShutOff();
 
     Bank bank;
-    bank.produceCashBalance();
+    bank.produceCashBalance(0.00);
     std::cout << std::endl;
 
     Restaurant food;
