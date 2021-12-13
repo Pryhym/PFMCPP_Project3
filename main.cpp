@@ -380,11 +380,11 @@ Amp::Amp()
 
 void Amp::projectAudio()
 {
-  for(int i = 1; i < outputs; ++i)
-  {
-      std::cout << "Amp Is Powering Output: " << i <<std::endl;
-  } 
-  std::cout << std::endl; 
+for(int i = 1; i < outputs; ++i)
+{
+std::cout << "Amp Is Powering Output: " << i <<std::endl;
+} 
+std::cout << std::endl; 
 }
 
 void Amp::powerSpeakers()
@@ -448,24 +448,24 @@ void Receiver::playCds()
 
 void Receiver::playRecords()
 {
-   while (function == 2)
-    {
-        std::cout << "Playing Records!!!!" << std::endl;
-        ++function;
-        selection();
-    
-    } 
+while (function == 2)
+{
+std::cout << "Playing Records!!!!" << std::endl;
+++function;
+selection();
+
+} 
 }
 
 void Receiver::playRadio()
 {
-   while (function == 3)
-    {
-        std::cout << "Playing Radio!!!" << std::endl;
-        ++function;
-        selection();
-    
-    } 
+while (function == 3)
+{
+std::cout << "Playing Radio!!!" << std::endl;
+++function;
+selection();
+
+} 
 }
 
 struct Remote
