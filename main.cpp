@@ -94,6 +94,7 @@ struct Laundromat
         float downTime(float timeOff);
     };
 
+    void waterShutOff();
     void washClothes();
     void dryClothes();
     float makeChange(float price, float amPaid);
@@ -108,6 +109,7 @@ Laundromat::Laundromat()
 void Laundromat::washClothes()
 {
     std::cout << "Number Of Dryers: " << numDryers << std::endl;
+    std::cout << std::endl;
 }
 
 void Laundromat::dryClothes()
@@ -122,6 +124,21 @@ float Laundromat::makeChange(float price, float amPaid)
 
 void Laundromat::WashingMachine::wash()
 {
+
+}
+
+void Laundromat::waterShutOff()
+{
+    amOfWaterUsedDaily = 0;
+    while(amOfWaterUsedDaily < 200)
+    {
+        
+        std::cout << "Amount Of Water Used: " << amOfWaterUsedDaily <<std::endl;
+        amOfWaterUsedDaily += 12.43f;
+    }
+    std::cout << std::endl;            
+    std::cout << "Water Exceeded Daily Amount!" << std::endl;
+    std::cout << std::endl;
 
 }
 
@@ -142,14 +159,16 @@ struct Bank
     float interestPaid = 349.67f;
     float paid;
     float debtOwed;
-    Bank ():
-    paid(1694.24f),
-    debtOwed(5430.69f)
-    {}
+    Bank ();
     float holdMoney(float amount);
     void processTransactions();
     float produceCashBalance(float balance);
 };
+
+Bank::Bank()
+{
+    std::cout << "Bank Class" << std::endl;
+}
 
 float Bank::holdMoney(float amount)
 {
@@ -161,8 +180,20 @@ void Bank::processTransactions()
     std::cout << "Money Withdrawn from ACCT: " << moneyWithdrawn << std::endl;
 }
 
-float Bank::produceCashBalance(float balance)
+float Bank::produceCashBalance(float balance = 0)
 {
+    for (balance = moneyDeposited; balance > 0; balance -= moneyWithdrawn)
+    {
+        std::cout << "Balance is: " << balance << std::endl;
+        std::cout << "$543.69 WithDrawn " << std::endl;
+        if (moneyWithdrawn > balance)
+        {
+        std::cout << "Not Enough Funds!!!!!" <<std::endl;
+        }
+    }
+    
+    std::cout << std::endl;
+    std::cout << "Your Broke!!" << std::endl;
     return balance;
 }
 
@@ -173,6 +204,7 @@ struct Restaurant
     int platesServed {24};
     float amFoodPerFamily = 79.48f;
     float hoursWorked = 86.77f;
+    float amountPerTable;
     Restaurant();
 
     struct Server
@@ -191,6 +223,7 @@ struct Restaurant
         float countTip(float tip);
     };
 
+    void tableAmount(int platePerFamily, int families);
     void serveFood();
     float collectPayment(float payment);
     void provideEatingUtensils();
@@ -204,7 +237,7 @@ Restaurant::Restaurant()
 
 void Restaurant::serveFood()
 {
-    std::cout << "Plates Served: " << platesServed << std::endl;
+    
 }
 
 float Restaurant::collectPayment(float payment)
@@ -215,6 +248,17 @@ float Restaurant::collectPayment(float payment)
 void Restaurant::provideEatingUtensils()
 {
 
+}
+
+void Restaurant::tableAmount(int platePerFamily, int families)
+{
+    while (families < platesServed) 
+    {
+       amountPerTable += (platePerFamily * amFoodPerFamily);
+       std::cout << "The Amount Of food served Total Is: " << amountPerTable << std::endl;
+       families += 1;
+    }
+     std::cout << std::endl;
 }
 
 void Restaurant::Server::serveCustomer()
@@ -243,6 +287,7 @@ struct CarDealership
     staff(15), 
     carServiced(24)
     {}
+    void inventoryTracker();
     float sellCars(float price);
     void hireSalesmen();
     int buyInventory(int inventory);
@@ -264,12 +309,22 @@ int CarDealership::buyInventory(int inventory)
     return inventory;
 }
 
+void CarDealership::inventoryTracker()
+{
+    for (int i = carInventory; i < inventoryBought; ++i)
+    {
+        std::cout << "Current Car Inventory Is: " << i <<std::endl;
+    }
+     std::cout << std::endl;
+}
+
 struct Speakers
 {
  
     std::string brand {"Vagnavox"};
     int modelNum {214375};
     int size = 12;
+    int time;
     float freqRange = 15000.00f;
     float impedence = 59.45f;
     Speakers();
@@ -286,7 +341,13 @@ Speakers::Speakers()
 
 void Speakers::produceAudio()
 {
-
+    
+    while (time < 15)
+    {
+        std::cout << "Producing Audio!!!!!!!" << std::endl;
+        ++time;
+    }
+     std::cout << std::endl;
 }
 
 void Speakers::receiveSignal()
@@ -320,7 +381,11 @@ Amp::Amp()
 
 void Amp::projectAudio()
 {
-    
+  for(int i=1; i < outputs; ++i)
+  {
+      std::cout << "Amp Is Powering Output: " << i <<std::endl;
+  } 
+  std::cout << std::endl; 
 }
 
 void Amp::powerSpeakers()
@@ -337,10 +402,11 @@ struct Receiver
 {
     std::string brand {"Pioneer"};
     int modelNum {869585};
-    int function = 5;
-    int inputs = 8;
+    int function = 1;
+    int inputs = 3;
     int outputs = 4;
     Receiver();
+    void selection();
     void playCds();
     void playRecords();
     void playRadio();
@@ -350,21 +416,57 @@ Receiver::Receiver()
 {
     std::cout << "Receiver Class" <<std::endl;
     std::cout << "The Receiver Brand Is: " << brand << std::endl;
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
+
+void Receiver::selection()
+{
+    std::cout << "Input 1-3(4 exits): " << function << std::endl;
+    while (function == 1)
+    {
+        playCds();
+    }
+    while (function ==2)
+    {
+        playRecords();
+    }
+    while (function ==3)
+    {
+        playRadio();
+    }
+}
+
 
 void Receiver::playCds()
 {
-    
+    while (function == 1)
+    {
+        std::cout << "Playing Cd!!!" <<std::endl;
+        ++function;
+        selection();
+    }
 }
 
 void Receiver::playRecords()
 {
-    std::cout << "Model Number: " << modelNum << std::endl;
+   while (function == 2)
+    {
+        std::cout << "Playing Records!!!!" << std::endl;
+        ++function;
+        selection();
+    
+    } 
 }
 
 void Receiver::playRadio()
 {
+   while (function == 3)
+    {
+        std::cout << "Playing Radio!!!" << std::endl;
+        ++function;
+        selection();
     
+    } 
 }
 
 struct Remote
@@ -383,12 +485,25 @@ struct Remote
 Remote::Remote()
 {
     std::cout << "Remote Class" << std::endl;
-    std::cout << "The Remote Brand Is: " << brand << std::endl;
+    std::cout << "The Remote Brand Is: " << brand << 
+    std::endl; 
+    std::cout << "Model Number: " << modelNum << std::endl;
 }
 
 void Remote::selectInputs()
 {
-    std::cout << "Model Number: " << modelNum << std::endl;
+   for (int i=0; i < 4; ++i)
+   { 
+   if (i == 1){
+       std::cout << "Input: Cd Player" << std::endl;
+   }
+   if (i == 2){
+       std::cout << "Input: Record Player" << std::endl;
+   }
+    if (i == 3){
+       std::cout << "Input: Radio" << std::endl;
+   }
+   }
 }
 
 int Remote::adjustVolume(int volumeUp, int volumeDown, int currentVolume)
@@ -410,19 +525,22 @@ struct Turntable
     float outputs;
     float beltSpeed;
     float needleWeight = 0.49673f;
-    Turntable():
-    outputs(2), 
-    beltSpeed(67.67f)
-    {}
+    Turntable();
+    void setBeltSpeed();
     void playRecord();
     bool choosePlaybackSpeed(bool thirtThree);
     void antiSkipAdjust();
 };
-
+Turntable::Turntable()
+{
+    std::cout << "Turntable Class" << std::endl;
+    std::cout << "Brand: " << brand << std::endl;
+    std::cout << "Model: " << modelNum << std::endl;
+}
 
 void Turntable::playRecord()
 {
-    std::cout << "Model Number: " << modelNum << std::endl;
+
 }
 
 bool Turntable::choosePlaybackSpeed(bool thirtThree)
@@ -433,6 +551,18 @@ bool Turntable::choosePlaybackSpeed(bool thirtThree)
 void Turntable::antiSkipAdjust()
 {
     
+}
+void Turntable::setBeltSpeed()
+{
+    int i=0;
+while (i < 2)
+{
+    beltSpeed = 33;
+    std::cout << "Belt Speed: " << beltSpeed << std::endl;
+    ++i;
+}
+beltSpeed = 45;
+std::cout << "Belt Speed: " << beltSpeed << std::endl;
 }
 
 struct StereoSystem
@@ -465,7 +595,12 @@ void StereoSystem::playRadio()
 
 void StereoSystem::recordAudio()
 {
-    
+    int i = 0;
+    while (i < 4)
+    {
+        std::cout << "Recording Audio" << std::endl;
+        ++i;
+    }
 }
 
 /*
@@ -491,55 +626,42 @@ int main()
     Laundromat wash;
     wash.washClothes();
     wash.dryClothes();
-    std::cout << wash.makeChange(15, 20) <<std::endl;
-    std::cout << std::endl;
+    wash.waterShutOff();
 
     Bank bank;
-    std::cout << bank.holdMoney(100) << std::endl;
-    bank.processTransactions();
-    std::cout << bank.produceCashBalance(1000) <<std::endl;
+    bank.produceCashBalance();
     std::cout << std::endl;
 
     Restaurant food;
-    food.serveFood();
-    std::cout << food.collectPayment(50.00) << std::endl;
-    food.provideEatingUtensils();
+    food.tableAmount(3,1);
     std::cout << std::endl;
 
     CarDealership cars;
-    std::cout <<cars.sellCars(20000) << std::endl;
-    std::cout << cars.buyInventory(20) << std::endl;
-    cars.hireSalesmen();
+    cars.inventoryTracker();
     std::cout << std::endl;
 
     Speakers speak;
-    speak.produceAudio();
     speak.receiveSignal();
+    speak.produceAudio();
     speak.vibrateCone();
     std::cout << std::endl;
 
     Amp amp;
-    amp.projectAudio();
     amp.powerSpeakers();
+    amp.projectAudio();
     amp.protectSystemFailure();
     std::cout << std::endl;
 
     Receiver receive;
-    receive.playCds();
-    receive.playRecords();
-    receive.playRadio();
+    receive.selection();
     std::cout << std::endl;
 
     Remote remote;
     remote.selectInputs();
-    std::cout << remote.adjustVolume(2,1,3)<< std::endl;
-    remote.selectMode();
     std::cout << std::endl;
 
     Turntable turn;
-    turn.playRecord();
-    turn.choosePlaybackSpeed(false);
-    turn.antiSkipAdjust();
+    turn.setBeltSpeed();
     std::cout << std::endl;
 
     StereoSystem stereo;
