@@ -493,19 +493,19 @@ void Remote::selectInputs()
 {
    for (int i = 0; i < 4; ++i)
    { 
-   if (i == 1) FIXME indentation
-   { FIXME indentation
-       std::cout << "Input: Cd Player" << std::endl;  FIXME indentation
-   } FIXME indentation
-   if (i == 2) FIXME indentation
-   { FIXME indentation
-       std::cout << "Input: Record Player" << std::endl; FIXME indentation
-   } FIXME indentation
-    if (i == 3) FIXME indentation FIXME indentation
-    { FIXME indentation
-       std::cout << "Input: Radio" << std::endl; FIXME indentation
-   } FIXME indentation
-   } FIXME indentation
+        if (i == 1)
+        { 
+            std::cout << "Input: Cd Player" << std::endl;
+        }
+        if (i == 2) 
+        {
+            std::cout << "Input: Record Player" << std::endl;
+        } 
+        if (i == 3) 
+        {
+            std::cout << "Input: Radio" << std::endl;
+        } 
+   } 
 }
 
 int Remote::adjustVolume(int volumeUp, int volumeDown, int currentVolume)
@@ -563,8 +563,8 @@ void Turntable::setBeltSpeed()
         std::cout << "Belt Speed: " << beltSpeed << std::endl;
         ++i;
     }
-beltSpeed = 45; FIXME indentation
-std::cout << "Belt Speed: " << beltSpeed << std::endl; FIXME indentation
+    beltSpeed = 45;
+    std::cout << "Belt Speed: " << beltSpeed << std::endl;
 }
 
 struct StereoSystem
