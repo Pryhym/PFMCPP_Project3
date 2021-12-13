@@ -104,7 +104,6 @@ Laundromat::Laundromat()
 {
     std::cout << "Laundromat Class" << std::endl;
     std::cout << "constructing the Amount of Water Used is: " << amOfWaterUsedDaily << std::endl;
-
 }
 void Laundromat::washClothes()
 {
@@ -132,7 +131,6 @@ void Laundromat::waterShutOff()
     amOfWaterUsedDaily = 0;
     while(amOfWaterUsedDaily < 200)
     {
-        
         std::cout << "Amount Of Water Used: " << amOfWaterUsedDaily <<std::endl;
         amOfWaterUsedDaily += 12.43f;
     }
@@ -191,7 +189,6 @@ float Bank::produceCashBalance(float balance)
             std::cout << "Not Enough Funds!!!!!" <<std::endl;
         }
     }
-    
     std::cout << std::endl;
     std::cout << "Your Broke!!" << std::endl;
     return balance;
@@ -320,7 +317,6 @@ void CarDealership::inventoryTracker()
 
 struct Speakers
 {
- 
     std::string brand {"Vagnavox"};
     int modelNum {214375};
     int size = 12;
@@ -380,11 +376,11 @@ Amp::Amp()
 
 void Amp::projectAudio()
 {
-for(int i = 1; i < outputs; ++i)
-{
-std::cout << "Amp Is Powering Output: " << i <<std::endl;
-} 
-std::cout << std::endl; 
+    for(int i = 1; i < outputs; ++i)
+    {
+        std::cout << "Amp Is Powering Output: " << i <<std::endl;
+    } 
+    std::cout << std::endl; 
 }
 
 void Amp::powerSpeakers()
@@ -512,7 +508,6 @@ int Remote::adjustVolume(int volumeUp, int volumeDown, int currentVolume)
 {
     currentVolume += volumeUp - volumeDown;
     return currentVolume;
-
 }
 
 void Remote::selectMode()
