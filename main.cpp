@@ -444,24 +444,22 @@ void Receiver::playCds()
 
 void Receiver::playRecords()
 {
-while (function == 2)
-{
-std::cout << "Playing Records!!!!" << std::endl;
-++function;
-selection();
-
-} 
+    while (function == 2)
+    {
+        std::cout << "Playing Records!!!!" << std::endl;
+        ++function;
+        selection();
+    } 
 }
 
 void Receiver::playRadio()
 {
-while (function == 3)
-{
-std::cout << "Playing Radio!!!" << std::endl;
-++function;
-selection();
-
-} 
+    while (function == 3)
+    {
+        std::cout << "Playing Radio!!!" << std::endl;
+        ++function;
+        selection();
+    } 
 }
 
 struct Remote
